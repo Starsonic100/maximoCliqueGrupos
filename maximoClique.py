@@ -56,7 +56,8 @@ while int(opc)!=4:
 	if int(opc)==1:
 		n=input("Inserte numero de personas:") 
 		P=range(int(n))
-		nom=range(int(n))
+		nom=range(int(n)) #Lista de nombres
+		vec=range(int(n)) #Lista de vecinos para obtener pivote
 		act=[] #Lista multidimensional de gustos, las listas dentro contienen tres gustos y la informacion de estas determina a que personas corresponden estos
 		rel=[] #Matriz de relaciones entre los sujetos.
 		for i in range(3):
