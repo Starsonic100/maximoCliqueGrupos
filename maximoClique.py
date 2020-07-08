@@ -41,6 +41,8 @@ def inicRel(rel,act,nom,n):
 					if  rel[i][int(opcR)]==0:
 						rel[i][int(opcR)]=1
 						rel[int(opcR)][i]=1
+						vec[i]=vec[i]+1
+						vec[int(opcR)]=vec[int(opcR)]+1
 					elif rel[i][int(opcR)]==1:
 						print("Ya hay relacion\n")
 				elif act[0][i]!=act[0][int(opcR)] or act[1][i]!=act[1][int(opcR)] or act[2][i]!=act[2][int(opcR)]:
@@ -64,6 +66,8 @@ while int(opc)!=4:
 			act.append([0]*(int(n)))
 		for i in range(int(n)):
 			rel.append([0]*(int(n)))
+		for i in range(int(n)):
+			vec[i]=0
 		inicG(nom,act,int(n))
 		print(P)
 		print(nom)
