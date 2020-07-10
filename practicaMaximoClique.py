@@ -107,8 +107,7 @@ while int(opc)!=4:
 		archivos(arch)
 		P=eval(arch[0])
 		nom=eval(arch[1])
-		act=eval(arch[2])
-		graf=eval(arch[3])
+		graf=eval(arch[2])
 	elif int(opc)==3:
 		bronkerbosch(R,P,X,graf)
 		print("Conjuntos de cliques: "+str(maxClique))
