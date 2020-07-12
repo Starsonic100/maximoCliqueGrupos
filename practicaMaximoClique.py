@@ -9,7 +9,7 @@ def inicP(nom,n):
 		nom[i]=str(nombre)
 
 
-def inicGraf(graf,nom,n,vec):
+def inicGraf(graf,nom,n):
 	for i in range(int(n)):
 		opcR=-1
 		while int(opcR)!=int(n):
@@ -34,8 +34,6 @@ def inicGraf(graf,nom,n,vec):
 				if  graf[i][int(opcR)]==0:
 					graf[i][int(opcR)]=1
 					graf[int(opcR)][i]=1
-					vec[i]=vec[i]+1
-					vec[int(opcR)]=vec[int(opcR)]+1
 				elif graf[i][int(opcR)]==1:
 						print("Ya hay relacion\n")
 			elif int(opcR)==i or int(opcR)>int(n) or int(opcR)<0:
@@ -91,16 +89,13 @@ while int(opc)!=4:
 		n=input("Inserte numero de personas:") 
 		P=range(int(n))
 		nom=range(int(n))
-		vec=range(int(n))
 		for i in range(int(n)):
 			graf.append([0]*(int(n)))
-		for i in range(int(n)):
-			vec[i]=0
 		inicP(nom,int(n))
 		#print(P)
 		#print(nom)
 		#print (act)
-		inicGraf(graf,nom,int(n),vec)
+		inicGraf(graf,nom,int(n))
 		#print (graf)
 	elif int(opc)==2:
 		arch=[]
